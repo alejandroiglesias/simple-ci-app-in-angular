@@ -1,7 +1,7 @@
 class JobController {
   /** @ngInject */
   constructor() {
-    this.isExpanded = true;
+    this.isExpanded = false;
   }
 
   getPassedFailedPercent(data) {

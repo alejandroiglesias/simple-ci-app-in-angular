@@ -17,6 +17,32 @@
   box-shadow: none;
 }
 
+.progress-job-statistic {
+  @extend .progress;
+  height: 32px;
+
+  .progress-bar {
+    line-height: 1;
+
+    &.progress-bar-success {
+      background-color: #C6DFB5;
+    }
+    &.progress-bar-danger {
+      background-color: #F6CBAE;
+    }
+  }
+
+  .progress-label {
+    position: relative;
+    top: -26.5px;
+    font-size: 16px;
+
+    small {
+      font-size: 11px;
+    }
+  }
+}
+
 .job-statistics {
   padding: 12px 12px 26px;
 
@@ -40,12 +66,21 @@
   color: $text-color;
   font-size: 14px;
   line-height: .8;
+
+  .progress-job-statistic {
+    margin-top: 11px;
+  }
 }
 .job-statistics-item-footer {
   position: absolute;
   bottom: 4px;
   left: 0;
   right: 0;
+}
+.job-statistics-item-chart {
+  width: 97px;
+  height: 97px;
+  margin-top: 5px;
 }
 
 .no-gutter {
