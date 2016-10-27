@@ -1,7 +1,9 @@
 class JobsListController {
   /** @ngInject */
-  constructor($log) {
-    $log.log('JobsListController');
+  constructor(jobsService) {
+    jobsService.get().then(jobs => {
+      this.jobs = jobs;
+    });
   }
 }
 

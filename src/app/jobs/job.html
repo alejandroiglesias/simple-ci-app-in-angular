@@ -1,0 +1,167 @@
+<div
+  class="job job-{{$ctrl.job.state.id}}"
+  ng-click="$ctrl.toggle()">
+  <div class="row">
+    <div class="col-xs-2">
+      <a href="" ng-click="" ng-show="$ctrl.isExpanded">{{$ctrl.job.id}}</a>
+      <span ng-hide="$ctrl.isExpanded">{{$ctrl.job.id}}</span>
+    </div>
+    <div class="col-xs-1 text-center">
+      {{$ctrl.job.owner}}
+    </div>
+    <div class="col-xs-2 text-center">
+      {{$ctrl.job.timeStarted}}
+    </div>
+    <div class="col-xs-2 text-center">
+      {{$ctrl.job.state.display}}
+    </div>
+    <div class="col-xs-1 text-center" ng-hide="$ctrl.isExpanded">
+      <div class="progress-job">
+        <div
+          class="progress-bar"
+          ng-class="{
+            'progress-bar-danger':  $ctrl.job.statistics.metrics.success === false,
+            'progress-bar-success': $ctrl.job.statistics.metrics.success === true,
+          }"
+          role="progressbar"
+          style="width: {{$ctrl.job.statistics.metrics.progress}}%;">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1 text-center" ng-hide="$ctrl.isExpanded">
+      <div class="progress-job">
+        <div
+          class="progress-bar"
+          ng-class="{
+            'progress-bar-danger':  $ctrl.job.statistics.build.success === false,
+            'progress-bar-success': $ctrl.job.statistics.build.success === true,
+          }"
+          role="progressbar"
+          style="width: {{$ctrl.job.statistics.build.progress}}%;">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1 text-center" ng-hide="$ctrl.isExpanded">
+      <div class="progress-job">
+        <div
+          class="progress-bar"
+          ng-class="{
+            'progress-bar-danger':  $ctrl.job.statistics.unitTest.success === false,
+            'progress-bar-success': $ctrl.job.statistics.unitTest.success === true,
+          }"
+          role="progressbar"
+          style="width: {{$ctrl.job.statistics.unitTest.progress}}%;">
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-1 text-center" ng-hide="$ctrl.isExpanded">
+      <div class="progress-job">
+        <div
+          class="progress-bar"
+          ng-class="{
+            'progress-bar-danger':  $ctrl.job.statistics.functionalTest.success === false,
+            'progress-bar-success': $ctrl.job.statistics.functionalTest.success === true,
+          }"
+          role="progressbar"
+          style="width: {{$ctrl.job.statistics.functionalTest.progress}}%;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" ng-show="$ctrl.isExpanded">
+    <div class="col-xs-12">
+      <div class="job-statistics clearfix">
+        <div class="job-statistics-item pull-left"  ng-if="$ctrl.job.statistics.metrics.progress === 100">
+          <div class="job-statistics-item-heading">Metrics</div>
+          <div class="job-statistics-item-body">
+            <div class="row no-gutter text-center">
+              <div class="col-xs-6">
+                <img src="/images/arrow-up.png" alt=""><br><span>Test</span>
+              </div>
+              <div class="col-xs-6">
+                <img src="/images/arrow-down.png" alt=""><br><span>Maintainability</span>
+              </div>
+            </div>
+            <br>
+            <div class="row no-gutter text-center">
+              <div class="col-xs-6">
+                <img src="/images/arrow-same.png" alt=""><br><span>Security</span>
+              </div>
+              <div class="col-xs-6">
+                <img src="/images/arrow-same.png" alt=""><br><span>Workmanship</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-statistics-item pull-left" ng-if="$ctrl.job.statistics.build.progress === 100">
+          <div class="job-statistics-item-heading">Build</div>
+          <div class="job-statistics-item-body text-center">
+            <br>
+            <br>
+            <div class="row no-gutter">
+              <div class="col-xs-6" ng-if="$ctrl.job.statistics.build.data.debug">
+                <img src="/images/build.png" alt=""><br><span>Debug</span>
+              </div>
+              <div class="col-xs-6" ng-if="$ctrl.job.statistics.build.data.release">
+                <img src="/images/build.png" alt=""><br><span>Release</span>
+              </div>
+            </div>
+            <div class="job-statistics-item-footer">{{$ctrl.job.statistics.build.data.date}}</div>
+          </div>
+        </div>
+        <div class="job-statistics-item pull-left" ng-if="$ctrl.job.statistics.unitTest.progress === 100">
+          <div class="job-statistics-item-heading">Unit Test</div>
+          <div class="job-statistics-item-body text-center">
+            <div class="row no-gutter">
+              <div class="col-xs-6">
+                <canvas
+                  chart
+                  chart-pie
+                  chart-data="[$ctrl.job.statistics.unitTest.data.passed, $ctrl.job.statistics.unitTest.data.failed]"
+                  chart-labels="['Passed', 'Failed']">
+                </canvas>
+              </div>
+              <div class="col-xs-6">
+                <div class="h2">{{$ctrl.getPassedFailedPercent($ctrl.job.statistics.unitTest.data)}}%</div>
+                <small>tests passed</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-statistics-item pull-left" ng-if="$ctrl.job.statistics.functionalTest.progress === 100">
+          <div class="job-statistics-item-heading">Functional Test</div>
+          <div class="job-statistics-item-body text-center">
+            <div class="row no-gutter">
+              <div class="col-xs-6">
+
+              </div>
+              <div class="col-xs-6">
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="job-statistics-item pull-left">
+          <div class="job-statistics-item-heading">Result</div>
+          <div class="job-statistics-item-body text-center">
+            {{$ctrl.job.state.result}}
+            <div ng-if="$ctrl.job.type === 'buld' && $ctrl.job.status.id === 'complete'">
+              <button class="btn btn-primary" type="button">Deploy</button>
+              to:
+              <select class="form-control">
+                <option>Staging</option>
+                <option selected>Production</option>
+              </select>
+            </div>
+            <div ng-if="$ctrl.job.type === 'changelist' && $ctrl.job.status.id === 'accepted'">
+              <button class="btn btn-primary" type="button">Merged Build</button>
+            </div>
+            <div ng-if="$ctrl.job.type === 'changelist' && $ctrl.job.status.id === 'rejected'">
+              <button class="btn btn-primary" type="button">Find Issues</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

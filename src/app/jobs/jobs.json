@@ -1,0 +1,304 @@
+[
+  {
+    "id":"Tenrox-R1_1235",
+    "type":"build",
+    "owner":null,
+    "timeStarted":null,
+    "state":{
+      "id":"pending",
+      "display":"Pending",
+      "result":null
+    },
+    "statistics":{
+      "metrics":{
+        "progress": 0,
+        "success":null,
+        "data":null
+      },
+      "build":{
+        "progress": 0,
+        "success":true,
+        "data":null
+      },
+      "unitTest":{
+        "progress": 0,
+        "success":true,
+        "data":null
+      },
+      "functionalTest":{
+        "progress": 0,
+        "success":true,
+        "data":null
+      }
+    }
+  },
+  {
+    "id":432462,
+    "type":"changelist",
+    "owner":"jtuck",
+    "timeStarted":"4/18/2014 12:12pm",
+    "state":{
+      "id":"running",
+      "display":"Running",
+      "result":null
+    },
+    "statistics":{
+      "metrics":{
+        "progress": 62,
+        "success":null,
+        "data":null
+      },
+      "build":{
+        "progress": 0,
+        "success":null,
+        "data":null
+      },
+      "unitTest":{
+        "progress": 0,
+        "success":null,
+        "data":null
+      },
+      "functionalTest":{
+        "progress": 0,
+        "success":true,
+        "data":null
+      }
+    }
+  },
+  {
+    "id":432461,
+    "type":"changelist",
+    "owner":"samy",
+    "timeStarted":"4/18/2014 10:53am",
+    "state":{
+      "id":"rejected",
+      "display":"Rejected",
+      "result":"Metrics Reduction"
+    },
+    "statistics":{
+      "metrics":{
+        "progress": 100,
+        "success":false,
+        "data":{
+          "test":{
+            "state":"up",
+            "value":64
+          },
+          "maintainability":{
+            "state":"down",
+            "value":53
+          },
+          "security":{
+            "state":"same",
+            "value":64
+          },
+          "workmanship":{
+            "state":"same",
+            "value":72
+          }
+        }
+      },
+      "build":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "debug":true,
+          "release":true,
+          "date": "10:46am 4/17/2014"
+        }
+      },
+      "unitTest":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "passed":142,
+          "failed":10,
+          "coverage":76
+        }
+      },
+      "functionalTest":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "passed":4321,
+          "failed":2145,
+          "coverage":23
+        }
+      }
+    }
+  },
+  {
+    "id":"Tenrox-R1_1234",
+    "type":"build",
+    "owner":null,
+    "timeStarted":"4/17/2014 9:42am",
+    "state":{
+      "id":"complete",
+      "display":"Complete",
+      "result":null
+    },
+    "statistics":{
+      "metrics":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "test":{
+            "state":"up",
+            "value":64
+          },
+          "maintainability":{
+            "state":"up",
+            "value":53
+          },
+          "security":{
+            "state":"same",
+            "value":64
+          },
+          "workmanship":{
+            "state":"same",
+            "value":72
+          }
+        }
+      },
+      "build":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "debug":true,
+          "release":true,
+          "date":"10:46am - 4/17/2014"
+        }
+      },
+      "unitTest":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "passed":142,
+          "failed":10,
+          "coverage":76
+        }
+      },
+      "functionalTest":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "passed":4321,
+          "failed":2145,
+          "coverage":23
+        }
+      }
+    }
+  },
+  {
+    "id":432460,
+    "type":"changelist",
+    "owner":"samy",
+    "timeStarted":"4/17/2014 7:51am",
+    "state":{
+      "id":"rejected",
+      "display":"Rejected",
+      "result":"Metrics Reduction"
+    },
+    "statistics":{
+      "metrics":{
+        "progress": 100,
+        "success":false,
+        "data":{
+          "test":{
+            "state":"up",
+            "value":64
+          },
+          "maintainability":{
+            "state":"down",
+            "value":53
+          },
+          "security":{
+            "state":"same",
+            "value":64
+          },
+          "workmanship":{
+            "state":"same",
+            "value":72
+          }
+        }
+      },
+      "build":{
+        "progress": 0,
+        "success":null,
+        "data":null
+      },
+      "unitTest":{
+        "progress": 0,
+        "success":null,
+        "data":null
+      },
+      "functionalTest":{
+        "progress": 0,
+        "success":null,
+        "data":null
+      }
+    }
+  },
+  {
+    "id":"432459",
+    "type":"changelist",
+    "owner":"samy",
+    "timeStarted":"4/16/2014 6:43am",
+    "state":{
+      "id":"accepted",
+      "display":"Accepted",
+      "result":null
+    },
+    "statistics":{
+      "metrics":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "test":{
+            "state":"up",
+            "value":64
+          },
+          "maintainability":{
+            "state":"up",
+            "value":53
+          },
+          "security":{
+            "state":"same",
+            "value":64
+          },
+          "workmanship":{
+            "state":"same",
+            "value":72
+          }
+        }
+      },
+      "build":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "debug":true,
+          "release":true,
+          "date":"10:46am 4/17/2014"
+        }
+      },
+      "unitTest":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "passed":142,
+          "failed":10,
+          "coverage":76
+        }
+      },
+      "functionalTest":{
+        "progress": 100,
+        "success":true,
+        "data":{
+          "passed":4321,
+          "failed":2145,
+          "coverage":23
+        }
+      }
+    }
+  }
+]

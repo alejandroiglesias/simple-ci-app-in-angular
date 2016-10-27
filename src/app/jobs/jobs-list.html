@@ -1,1 +1,30 @@
-Hello world!
+<div class="jobs-list">
+  <div class="row">
+    <div class="col-xs-2">
+      Changelist / Build
+    </div>
+    <div class="col-xs-1 text-center">
+      Owner
+    </div>
+    <div class="col-xs-2 text-center">
+      Time Started
+    </div>
+    <div class="col-xs-2 text-center">
+      State
+    </div>
+    <div class="col-xs-1 text-center">
+      Metrics
+    </div>
+    <div class="col-xs-1 text-center">
+      Build
+    </div>
+    <div class="col-xs-1 text-center">
+      Unit Test
+    </div>
+    <div class="col-xs-1 text-center">
+      Functional Test
+    </div>
+  </div>
+  <job ng-repeat="job in $ctrl.jobs track by job.id" job="job"></job>
+</div>
+
