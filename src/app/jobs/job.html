@@ -3,7 +3,8 @@
   ng-class="{'job-expanded': $ctrl.isExpanded}"
   ng-click="$ctrl.expand()">
   <div class="row">
-    <div class="col-xs-2">
+    <div class="col-xs-3">
+      <img class="job-type-img mr-2" src="/images/{{$ctrl.job.type}}-sm-{{$ctrl.job.state.id}}.jpg" alt="">
       <a href="" ng-click="" ng-show="$ctrl.isExpanded">{{$ctrl.job.id}}</a>
       <span class="test-job-id" ng-hide="$ctrl.isExpanded">{{$ctrl.job.id}}</span>
     </div>
@@ -77,19 +78,23 @@
       <div class="job-statistics-item-body">
         <div class="row no-gutter text-center">
           <div class="col-xs-6">
-            <img src="/images/arrow-up.png" alt=""><br><span>Test</span>
+            <img src="/images/arrow-up.png" alt="">
+            <div>Test</div>
           </div>
           <div class="col-xs-6">
-            <img src="/images/arrow-down.png" alt=""><br><span>Maintainability</span>
+            <img src="/images/arrow-down.png" alt="">
+            <div>Maintainability</div>
           </div>
         </div>
         <br>
         <div class="row no-gutter text-center">
           <div class="col-xs-6">
-            <img src="/images/arrow-same.png" alt=""><br><span>Security</span>
+            <img src="/images/arrow-same.png" alt="">
+            <div>Security</div>
           </div>
           <div class="col-xs-6">
-            <img src="/images/arrow-same.png" alt=""><br><span>Workmanship</span>
+            <img src="/images/arrow-same.png" alt="">
+            <div>Workmanship</div>
           </div>
         </div>
       </div>
