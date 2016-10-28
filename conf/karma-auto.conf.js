@@ -17,8 +17,10 @@ module.exports = function (config) {
     ],
     files: [
       'node_modules/es6-shim/es6-shim.js',
+      'node_modules/karma-read-json/karma-read-json.js',
       conf.path.src('index.spec.js'),
-      conf.path.src('**/*.html')
+      conf.path.src('**/*.html'),
+      {pattern: 'test/mocks/**/*.json', included: false}
     ],
     preprocessors: {
       [conf.path.src('index.spec.js')]: [

@@ -1,0 +1,33 @@
+{
+  "id":432462,
+  "type":"changelist",
+  "owner":"jtuck",
+  "timeStarted":"4/18/2014 12:12pm",
+  "state":{
+    "id":"running",
+    "display":"Running",
+    "result":null
+  },
+  "statistics":{
+    "metrics":{
+      "progress": 62,
+      "success":null,
+      "data":null
+    },
+    "build":{
+      "progress": 0,
+      "success":null,
+      "data":null
+    },
+    "unitTest":{
+      "progress": 0,
+      "success":null,
+      "data":null
+    },
+    "functionalTest":{
+      "progress": 0,
+      "success":true,
+      "data":null
+    }
+  }
+}

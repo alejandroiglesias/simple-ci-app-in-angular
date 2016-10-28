@@ -1,0 +1,33 @@
+{
+  "id":"Tenrox-R1_1235",
+  "type":"build",
+  "owner":null,
+  "timeStarted":null,
+  "state":{
+    "id":"pending",
+    "display":"Pending",
+    "result":null
+  },
+  "statistics":{
+    "metrics":{
+      "progress": 0,
+      "success":null,
+      "data":null
+    },
+    "build":{
+      "progress": 0,
+      "success":true,
+      "data":null
+    },
+    "unitTest":{
+      "progress": 0,
+      "success":true,
+      "data":null
+    },
+    "functionalTest":{
+      "progress": 0,
+      "success":true,
+      "data":null
+    }
+  }
+}

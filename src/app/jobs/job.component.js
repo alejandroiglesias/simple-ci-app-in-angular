@@ -11,7 +11,9 @@ class JobController {
     if (this.isExpanded || ['pending', 'running'].indexOf(this.job.state.id) !== -1) {
       return;
     }
-    this.jobsList.collapse();
+    if (this.jobsList) {
+      this.jobsList.collapse();
+    }
     this.isExpanded = true;
   }
 
@@ -26,7 +28,7 @@ export default {
   },
   controller: JobController,
   require: {
-    jobsList: '^jobsList'
+    jobsList: '^?jobsList'
   },
   template: require('./job.html')
 };
