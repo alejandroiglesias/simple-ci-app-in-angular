@@ -135,7 +135,7 @@
     "state":{
       "id":"complete",
       "display":"Complete",
-      "result":null
+      "result":"Complete"
     },
     "statistics":{
       "metrics":{
@@ -247,7 +247,7 @@
     "state":{
       "id":"accepted",
       "display":"Accepted",
-      "result":null
+      "result":"Auto-Merged"
     },
     "statistics":{
       "metrics":{

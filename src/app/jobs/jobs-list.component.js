@@ -1,9 +1,14 @@
 class JobsListController {
   /** @ngInject */
-  constructor(jobsService) {
+  constructor($scope, jobsService) {
+    this.$scope = $scope;
     jobsService.get().then(jobs => {
       this.jobs = jobs;
     });
+  }
+
+  collapse() {
+    this.$scope.$broadcast('job:collapse');
   }
 }
 
