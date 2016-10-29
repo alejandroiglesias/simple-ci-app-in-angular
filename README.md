@@ -1,5 +1,10 @@
 # Crossover test
 
+## Work done
+
+Most of the functionality shown in the design and described is done. What's missing is numbers in
+the Metrics box when expanding a changelist/build job and numbers on the pie chart.
+
 ## Getting started
 
 This project uses [Node](https://nodejs.org/) and [Gulp](http://gulpjs.com/) to build the project and
