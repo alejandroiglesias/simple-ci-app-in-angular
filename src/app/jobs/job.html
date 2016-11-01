@@ -4,7 +4,7 @@
   ng-click="$ctrl.expand()">
   <div class="row">
     <div class="col-xs-3">
-      <img class="job-type-img mr-2" src="/images/{{$ctrl.job.type}}-sm-{{$ctrl.job.state.id}}.jpg" alt="">
+      <img class="job-type-img mr-2" ng-src="/images/{{$ctrl.job.type}}-sm-{{$ctrl.job.state.id}}.jpg" alt="">
       <a href="" ng-click="" ng-show="$ctrl.isExpanded">{{$ctrl.job.id}}</a>
       <span class="test-job-id" ng-hide="$ctrl.isExpanded">{{$ctrl.job.id}}</span>
     </div>
